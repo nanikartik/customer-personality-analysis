@@ -57,7 +57,7 @@ if uploaded_file is not None:
 
     # Drop non-numerical / ID columns (from marketing campaign dataset)
     drop_cols = [
-        'ID', 'Dt_Customer'
+        'ID','Dt_Customer','Z_CostContact','Z_Revenue'
     ]
     df_processed.drop(
         columns=[col for col in drop_cols if col in df_processed.columns],
@@ -107,3 +107,4 @@ if uploaded_file is not None:
             file_name="customer_segments.csv",
             mime="text/csv"
         )
+
